@@ -1,0 +1,37 @@
+<div class="sign-in-component">
+  <img src="/assets/img/single_user.png" />
+  <form
+    [formGroup]="loginForm"
+    #documentEditForm="ngForm"
+    autocomplete="off"
+    class="sign-in-component__form"
+  >
+    <div class="sign-in-component__form--username">
+      <p-floatLabel>
+        <input
+          id="username"
+          type="text"
+          pInputText
+          formControlName="username"
+        />
+        <label for="username">Username</label>
+      </p-floatLabel>
+    </div>
+    <p-floatLabel>
+      <input
+        id="password"
+        type="password"
+        pInputText
+        formControlName="password"
+      />
+      <label for="password">Password</label>
+    </p-floatLabel>
+    <p-button
+      [raised]="true"
+      label="Login"
+      (click)="login()"
+      [disabled]="!loginForm.valid"
+      [rounded]="true"
+    />
+  </form>
+</div>

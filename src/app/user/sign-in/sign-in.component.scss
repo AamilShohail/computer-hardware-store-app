@@ -1,0 +1,17 @@
+.sign-in-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--username {
+      margin: 20px;
+    }
+  }
+}
+p-button {
+  margin: 25px;
+}
