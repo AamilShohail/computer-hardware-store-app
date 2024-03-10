@@ -1,15 +1,18 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { routes } from './app.routes';
 import {
   GoogleLoginProvider,
   SocialAuthServiceConfig,
 } from '@abacritt/angularx-social-login';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    provideHttpClient(),
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
@@ -30,5 +33,6 @@ export const appConfig: ApplicationConfig = {
         },
       } as SocialAuthServiceConfig,
     },
+    importProvidersFrom([BrowserAnimationsModule]),
   ],
 };

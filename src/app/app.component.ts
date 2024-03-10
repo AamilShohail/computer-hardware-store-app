@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { PrimeNGConfig } from 'primeng/api';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
