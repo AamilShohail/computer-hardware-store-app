@@ -1,6 +1,6 @@
 <div class="file-upload">
   <p-fileUpload
-    url="https://www.primefaces.org/cdn/api/upload.php"
+    [url]="fileUploadUrl"
     (onUpload)="onUpload($event)"
     [multiple]="true"
     accept=".csv"

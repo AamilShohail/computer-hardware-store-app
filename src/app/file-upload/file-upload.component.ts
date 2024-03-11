@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { environment } from '@app/environments/environment';
 import { MessageService } from 'primeng/api';
 import { FileUploadModule } from 'primeng/fileupload';
 
@@ -13,6 +14,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 })
 export class FileUploadComponent {
   uploadedFiles: any[] = [];
+  fileUploadUrl: string = environment.endpoints.productInventoryFileUpload;
 
   constructor(private messageService: MessageService) {}
 
