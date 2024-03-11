@@ -1,4 +1,5 @@
 # ComputerHardwareStoreApp
+![image](https://github.com/AamilShohail/computer-hardware-store-app/assets/51943835/9c33ef78-c606-4dc6-bcf0-1a36876e7893)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
 
